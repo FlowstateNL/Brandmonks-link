@@ -1,0 +1,333 @@
+/* --- Kalme Variabelen & BrandMonks Accenten --- */
+:root {
+    --bg-page: #fcfcfc;
+    --text-main: #3f3f46;
+    --text-heading: #18181b;
+    --text-muted: #71717a;
+    --accent-dark: #18181b;
+    --accent-brand: #ff7b62;
+    --border-subtle: #f4f4f5;
+    --border-medium: #e4e4e7;
+    --bg-card: #ffffff;
+    --max-width: 840px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-page);
+    color: var(--text-main);
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.7;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* --- Typografie --- */
+h1, h2, h3 {
+    color: var(--text-heading);
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+h1 {
+    font-size: 2.4rem;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+/* --- Layout --- */
+main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* --- Transparante, zwevende Header --- */
+.site-header {
+    position: sticky;
+    top: 0;
+    background-color: rgba(252, 252, 252, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    z-index: 100;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.header-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    font-weight: 600;
+    color: var(--text-heading);
+    text-decoration: none;
+    font-size: 1rem;
+    letter-spacing: -0.01em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.brand::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: var(--accent-brand);
+    border-radius: 50%;
+}
+
+nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    margin-left: 2rem;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--text-heading);
+}
+
+/* --- Hero Sectie --- */
+.hero {
+    padding: 6rem 0 5rem;
+    border-bottom: 1px solid var(--border-subtle);
+    margin-bottom: 5rem;
+}
+
+.eyebrow {
+    color: var(--accent-brand);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 1.25rem;
+    display: block;
+}
+
+.intro {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    max-width: 720px;
+    margin-bottom: 2.5rem;
+    font-weight: 400;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+/* --- Knoppen & Links --- */
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem 1.6rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.button.primary {
+    background-color: var(--accent-dark);
+    color: #ffffff;
+}
+
+.button.primary:hover {
+    background-color: #000000;
+    transform: translateY(-1px);
+}
+
+.button.secondary {
+    background-color: transparent;
+    color: var(--text-heading);
+    border: 1px solid var(--border-medium);
+}
+
+.button.secondary:hover {
+    border-color: var(--accent-brand);
+    color: var(--accent-brand);
+    background-color: var(--bg-card);
+}
+
+.text-link {
+    color: var(--text-heading);
+    font-weight: 500;
+    text-decoration: underline;
+    text-decoration-color: var(--border-medium);
+    text-underline-offset: 4px;
+    transition: all 0.2s ease;
+}
+
+.text-link:hover {
+    color: var(--accent-brand);
+    text-decoration-color: var(--accent-brand);
+}
+
+/* --- Algemene Content Secties --- */
+.content-section {
+    margin-bottom: 5rem;
+    max-width: 680px;
+}
+
+.section-kicker {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    display: block;
+    margin-bottom: 0.75rem;
+}
+
+/* --- Split Sectie --- */
+.split-section {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 4rem;
+    margin-bottom: 5rem;
+    align-items: start;
+    border-top: 1px solid var(--border-subtle);
+    padding-top: 5rem;
+}
+
+.note {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    padding: 2rem;
+    border-radius: 12px;
+    border-top: 3px solid var(--accent-brand);
+}
+
+.note h3 {
+    font-size: 1rem;
+    margin-bottom: 1.25rem;
+    color: var(--text-heading);
+}
+
+.note ul {
+    list-style: none;
+}
+
+.note li {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.note li:last-child {
+    margin-bottom: 0;
+}
+
+.note li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--accent-brand);
+}
+
+.note strong {
+    color: var(--text-heading);
+}
+
+/* --- Stappenplan --- */
+.steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.step-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    padding: 2rem 1.5rem;
+    border-radius: 12px;
+}
+
+.step-number {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--accent-brand);
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.step-card h3 {
+    font-size: 1rem;
+}
+
+.step-card p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 0;
+}
+
+/* --- Minimalistische Footer --- */
+.site-footer {
+    border-top: 1px solid var(--border-subtle);
+    padding: 4rem 1.5rem;
+    margin-top: 6rem;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.footer-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    margin-top: 1.5rem;
+}
+
+.footer-links a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+    color: var(--accent-brand);
+}
+
+/* --- Responsief (Mobiel) --- */
+@media (max-width: 768px) {
+    h1 { font-size: 1.9rem; }
+    h2 { font-size: 1.5rem; }
+    .hero { padding: 4rem 0 3rem; }
+    .split-section { grid-template-columns: 1fr; gap: 2.5rem; padding-top: 3rem; }
+    nav a { margin-left: 1rem; }
+}
